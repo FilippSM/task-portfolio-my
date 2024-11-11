@@ -16,7 +16,6 @@ export const Skill = (props: SkillPropsType) => {
 const StyledSkill = styled.div`
     flex: 0 1 calc(16.66% - 16px);
   /*   width: 16.66%;  */
-    background-color: #db8bf2;
     display: flex; /* Используем Flexbox для колонки */
     justify-content: center; /* Центрируем по горизонтали */
     align-items: center; /* Центрируем по вертикали */
