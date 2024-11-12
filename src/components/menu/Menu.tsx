@@ -23,6 +23,12 @@ const SytledMenu = styled.nav`
     ul {
         display: flex;
         gap: 30px;
+        height: 40px;
+        align-items: center;
+    }
+
+    @media ${theme.media.tablet} {
+        display: none;
     }
 `
 
@@ -30,6 +36,7 @@ const ListItem = styled.li`
     &:hover {
         transform: skewX(12deg);
     }
+  /*   position: relative; */
 `
 const Link = styled.a`
     color: ${theme.colors.accent};
