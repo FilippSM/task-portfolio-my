@@ -40,7 +40,4 @@ export const GlobalStyle = createGlobalStyle`
         color: ${theme.colors.accent};
     }
 
-    section {
-        padding: 72px 0px;
-    }
 `

@@ -6,10 +6,10 @@ import { theme } from "../../../styles/Theme";
 export const MobileMenu = (props: { menuItems: Array<string> }) => {
     return (
         <SytledMobileMenu>
-            <BurgerButton isOpen={true}>
+            <BurgerButton isOpen={false}>
                 <span></span>
             </BurgerButton>
-            <MobileMenuPopup isOpen={true}>
+            <MobileMenuPopup isOpen={false}>
                 <ul>
                     {props.menuItems.map((item, index) => {
                         return (
@@ -68,12 +68,12 @@ const BurgerButton = styled.button<{isOpen: boolean}>`
 
     span {
         display: block;
-        width: 36px;
+        width: 18px;
         height: 2px;
         background-color: ${theme.colors.accent};
         position: absolute;
-        left: 40px;
-        bottom: 50px;
+        left: 60px;
+        bottom: 72px;
 
         ${props => props.isOpen && css<{isOpen: boolean}>`
             background-color: rgba(255, 255, 255, 0); /* задается прозрачность спана */
@@ -82,11 +82,11 @@ const BurgerButton = styled.button<{isOpen: boolean}>`
         &::before {
             content: "";
             display: block;
-            width: 36px;
+            width: 18px;
             height: 2px;
             background-color: ${theme.colors.accent};
             position: absolute;  
-            transform: translateY(-10px);
+            transform: translateY(-6px);
 
             ${props => props.isOpen && css<{isOpen: boolean}>`
                 transform: rotate(-45deg) translateY(0);
@@ -96,11 +96,11 @@ const BurgerButton = styled.button<{isOpen: boolean}>`
         &::after {
             content: "";
             display: block;
-            width: 36px;
+            width: 18px;
             height: 2px;
             background-color: ${theme.colors.accent};
             position: absolute;  
-            transform: translateY(10px);
+            transform: translateY(6px);
 
             ${props => props.isOpen && css<{isOpen: boolean}>`
                 transform: rotate(45deg) translateY(0);

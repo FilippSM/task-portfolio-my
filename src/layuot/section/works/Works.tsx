@@ -6,6 +6,7 @@ import projOne from "./../../../assets/images/Pic_2.webp"
 import projTwo from "./../../../assets/images/Pic_3.webp"
 import projFour from "./../../../assets/images/Pic_4.webp"
 import { Container } from "../../../components/Container";
+import { theme } from "../../../styles/Theme";
 
 
 
@@ -16,7 +17,7 @@ export const Works = () => {
                 <SectionTitle>
                     Projects
                 </SectionTitle>
-                <FlexWrapper direction={"column"} justify={"space-around"} gap={"80px"} align={"center"}>
+                <StyledFlexWrapper direction={"column"} justify={"space-around"} gap={"80px"} align={"center"}>
                     <Work title={"Project Name"}
                         text={"I created this personal project in order to show how to create an interface in Figma using a portfolio as an example."}
                         src={projOne}
@@ -29,12 +30,23 @@ export const Works = () => {
                         text={"You can also add in this description the type of the project, if it was for web, mobile, electron."}
                         src={projFour}
                     />
-                </FlexWrapper>
+                </StyledFlexWrapper>
             </Container>
         </StyledWorks>
     );
 };
 
-const StyledWorks = styled.section`
+const StyledFlexWrapper = styled(FlexWrapper)`
+    @media ${theme.media.mobile} {
+        gap: 50px 0px;
+    }
+`;
 
+
+const StyledWorks = styled.section`
+    margin-bottom: 114px;
+
+    @media ${theme.media.tablet} {
+        margin-bottom: 80px;
+    }
 `

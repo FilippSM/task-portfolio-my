@@ -27,6 +27,21 @@ const StyledWork = styled.div`
     border-radius: 10px;
     box-shadow: 0 6px 64px 0 rgba(112, 144, 176, 0.1); //стили проета окна
     overflow: hidden;
+    
+    background-color: #eb9595;
+
+    @media ${theme.media.tablet} {
+/*         flex-direction: column-reverse; */
+      /*   width: 400px; */
+    /*     height: auto; */
+
+    }
+
+    @media ${theme.media.mobile} {
+        flex-direction: column-reverse;
+        width: 100%;
+        height: 1047px;
+    }
 `
 
 const Content = styled.div`
@@ -35,12 +50,28 @@ const Content = styled.div`
     flex-direction: column;
     justify-content: center;
     background-color: ${theme.colors.white};
-    padding: 0px 50px 0px 40px;
+    padding: 0px 40px 0px 50px;
+
+    @media ${theme.media.tablet} {
+      /*   min-height: 521px; */
+    
+    }
+
+    @media ${theme.media.mobile} {
+        width: 100%;
+        height: 50%;
+        padding: 0px 28px 0px 35px;
+    }
 `
 
 const Image = styled.img`
     width: 50%;
     object-fit: cover;
+
+    @media ${theme.media.mobile} {
+        width: 100%;
+        height: 50%;
+    }
 `
 
 const Title = styled.h3`
@@ -62,7 +93,7 @@ const Link = styled.a`
     height: 43px;
     background-color: ${theme.colors.white};
     
-    //выравнивание текста по уентру
+    //выравнивание текста по центру
     display: flex; /* Используем flexbox для центрирования */
     justify-content: center; /* Центрируем по горизонтали */
     align-items: center; /* Центрируем по вертикали */

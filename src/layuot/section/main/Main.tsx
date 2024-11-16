@@ -1,16 +1,17 @@
 import styled from "styled-components";
 /* import image from "../../../assets/images/Pic_1.webp" */
 import image from "../../../assets/images/BG.png"
-import { FlexWrapper } from "../../../components/FlexWrapper";
+/* import { FlexWrapper } from "../../../components/FlexWrapper"; */
 import { Container } from "../../../components/Container";
 import { theme } from "../../../styles/Theme";
+import { font } from "../../../styles/Common";
 
 export const Main = () => {
     return (
         <StyledMain>
             <Container>
-                <FlexWrapper align={"center"} justify={"space-between"}>
-                    <StyledDiv>
+                <FlexWrapper /* justify={"space-between"} */>
+                    <StyledDescription>
                         <h1>Software Developer</h1>
                         <h2>Hello, my name is Vahid Navazan</h2>
                         <p>Short text with details about you, what you do or your professional career. You can add more information on the about page.</p>
@@ -18,7 +19,7 @@ export const Main = () => {
                             <LinkProjects href="">Projects</LinkProjects>
                             <LinkLinkedIn href="">LinkedIn</LinkLinkedIn>
                         </ButtonGroup>
-                    </StyledDiv>
+                    </StyledDescription>
 
                     <StyledContainer>
                       {/*   <svg width="0" height="0">
@@ -43,10 +44,20 @@ export const Main = () => {
     );
 };
 
+const FlexWrapper = styled.div`
+    display: flex;
+    justify-content: space-between;
 
-const StyledDiv = styled.div`
+    @media ${theme.media.tablet} {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+`
+
+const StyledDescription = styled.div`
+    margin-top: 80px;
     max-width: 508px;
-
+    
     h1 {
         font-weight: 700;
         font-size: 20px;
@@ -56,9 +67,8 @@ const StyledDiv = styled.div`
     }
 
     h2 {
+        ${font({weight: 700, Fmin: 42, Fmax: 64})}
         font-family: "Roboto", sans-serif;
-        font-weight: 700;
-        font-size: 64px;
         line-height: 1.2;
     }
 
@@ -67,6 +77,10 @@ const StyledDiv = styled.div`
         font-size: 24px;
         line-height: 1.5;
         margin: 32px 0px;
+    }
+
+    @media ${theme.media.tablet} {
+        margin-top: 0px;
     }
 `
 
@@ -116,53 +130,33 @@ const StyledMain = styled.div`
     position: relative;
     margin-top: -60px;
     display: flex; // чтобы контейнер был на всю высоту секции
-    /* margin-left: 80px; */
     overflow: hidden;
+    margin-bottom: 114px;
+
+    @media ${theme.media.tablet} {
+        margin-bottom: 80px;
+    }
+
 `
 
 const StyledContainer = styled.div`
     position: relative;
-    width: 720px;  
-    height: 690px; 
-
-
-
-
+    width: 600px;  
+    /* height: 690px;  */
     
-  /*   overflow: hidden; */
-   /*  margin-left: 80px; */
+    @media ${theme.media.tablet} {
+        width: 100%;
+        margin-bottom: 60px;
+    }
 `
 
 const StyledImage = styled.img`
-margin-left: 80px; /* Смещение вправо на 80 пикселей */
-/* position: relative; 
-left: 80px;  */
-  /*   max-width: 720px; */
-   /*  height: 630px; */
-   /*  object-fit: cover;  */
-`
 
+    @media ${theme.media.tablet} {
+        margin-left: 0px;
 
-/* const StyledImage = styled.img`
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    -webkit-clip-path: url(#my-shape);
-    clip-path: url(#my-shape);
-    object-fit: cover; 
-    
+        //конструкция чтобы картинка зпнимала всю ширину окна как в макете и игнорировала паддинги контейнера
+        width: 100vw;
+        margin-left: -15px;
+    }
 `
-
-const StyledSvg = styled.svg`
-    position: absolute;
-        top: 0;
-        left: 0;
-        width: 700px;
-        height: 100%;
-        fill: #FDC435; 
-        -webkit-clip-path: url(#my-shape);
-        clip-path: url(#my-shape);
-`
- */
