@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import { Icon } from "../../../components/icon/Icon";
-import yellowBgFooter from "../../../assets/images/yellowBgFooter.svg";
-import { FlexWrapper } from "../../../components/FlexWrapper";
-import { theme } from "../../../styles/Theme";
+import { Icon } from "../../components/icon/Icon";
+import yellowBgFooter from "../../assets/images/yellowBgFooter.svg";
+import { FlexWrapper } from "../../components/FlexWrapper";
+import { theme } from "../../styles/Theme";
 
 export const Footer = () => {
     return (
