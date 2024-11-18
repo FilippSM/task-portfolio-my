@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { theme } from "../../styles/Theme";
-
-
+import React from "react";
 
 export const Menu = (props: { menuItems: Array<string> }) => {
     return (

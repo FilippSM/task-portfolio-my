@@ -1,0 +1,130 @@
+import styled from "styled-components";
+import { theme } from "../../../styles/Theme";
+import { font } from "../../../styles/Common";
+import { FlexWrapper } from "../../../components/FlexWrapper";
+
+const StyledFlexWrapper = styled(FlexWrapper)`
+    @media ${theme.media.tablet} {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+`;
+
+const Description = styled.div`
+    margin-top: 80px;
+    max-width: 508px;
+    
+    h1 {
+        font-weight: 700;
+        font-size: 20px;
+        text-transform: uppercase;
+        color: ${theme.colors.secondaryBg};
+        margin-bottom: 12px;
+    }
+
+    h2 {
+        ${font({ weight: 700, Fmin: 42, Fmax: 64 })}
+        font-family: "Roboto", sans-serif;
+        line-height: 1.2;
+    }
+
+    p {
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 1.5;
+        margin: 32px 0px;
+    }
+
+    @media ${theme.media.tablet} {
+        margin-top: 0px;
+    }
+`
+
+const ButtonGroup = styled.div`
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+`
+
+const LinkProjects = styled.a`
+    border: none;
+    border-radius: 5px;
+    width: 115px;
+    height: 43px;
+    background-color: ${theme.colors.secondaryBg};
+    
+    //выравнивание текста по уентру
+    display: flex; /* Используем flexbox для центрирования */
+    justify-content: center; /* Центрируем по горизонтали */
+    align-items: center; /* Центрируем по вертикали */
+
+    //стили текста
+    color: ${theme.colors.accent};
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.5;
+
+    &:hover {
+        background-color: ${theme.colors.white};
+        border: 2px solid ${theme.colors.accent};
+    }
+`
+//наследование
+const LinkLinkedIn = styled(LinkProjects)`
+    border: 2px solid ${theme.colors.accent};
+    background-color: ${theme.colors.white};
+    color: ${theme.colors.accent};
+
+    &:hover {
+        background-color: ${theme.colors.secondaryBg};
+        border: none;
+    }
+`
+
+const Main = styled.div`
+    position: relative;
+    margin-top: -60px;
+    display: flex; // чтобы контейнер был на всю высоту секции
+    overflow: hidden;
+    margin-bottom: 114px;
+
+    @media ${theme.media.tablet} {
+        margin-bottom: 80px;
+    }
+
+`
+
+const ContainerImage = styled.div`
+    position: relative;
+    width: 600px;  
+    /* height: 690px;  */
+    
+    @media ${theme.media.tablet} {
+        width: 100%;
+        margin-bottom: 60px;
+    }
+`
+
+const Image = styled.img`
+
+    @media ${theme.media.tablet} {
+        margin-left: 0px;
+
+        //конструкция чтобы картинка зпнимала всю ширину окна как в макете и игнорировала паддинги контейнера
+        width: 100vw;
+        margin-left: -15px;
+    }
+`
+
+export const S = {
+    StyledFlexWrapper,
+    Description,
+    ButtonGroup,
+    LinkProjects,
+    LinkLinkedIn,
+    Main,
+    ContainerImage,
+    Image
+}
+

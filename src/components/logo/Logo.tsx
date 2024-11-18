@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import { theme } from "../../styles/Theme";
+import React from "react";
 
-export const Logo = () => {
+export const Logo: React.FC = () => {
     return (
         <a>
             <StyledSpan>
