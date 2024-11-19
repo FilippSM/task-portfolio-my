@@ -7,10 +7,6 @@ import { S } from "./Header_Styles";
 import { DesktopMenu } from "./headerMenu/desktopMenu/DesktopMenu";
 
 
-
-
-const items = ["About", "Projects", "Contacts"];
-
 export const Header: React.FC = () => {
 
     const [width, setWidth] = React.useState(window.innerWidth);
@@ -29,8 +25,8 @@ export const Header: React.FC = () => {
                 <FlexWrapper justify={"space-between"} align={"center"} height={"40px"}>
                     <Logo />
 
-                    {width < breakpoint ? <MobileMenu menuItems={items} />
-                        : <DesktopMenu menuItems={items} />}
+                    {width < breakpoint ? <MobileMenu/>
+                        : <DesktopMenu/>}
                 </FlexWrapper>
             </Container>
         </S.Header>

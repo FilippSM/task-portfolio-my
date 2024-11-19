@@ -11,17 +11,9 @@ const StyledFlexWrapper = styled(FlexWrapper)`
 `;
 
 const Description = styled.div`
-    margin-top: 80px;
+    margin-top: 110px;
     max-width: 508px;
     
-    h1 {
-        font-weight: 700;
-        font-size: 20px;
-        text-transform: uppercase;
-        color: ${theme.colors.secondaryBg};
-        margin-bottom: 12px;
-    }
-
     h2 {
         ${font({ weight: 700, Fmin: 42, Fmax: 64 })}
         font-family: "Roboto", sans-serif;
@@ -39,6 +31,19 @@ const Description = styled.div`
         margin-top: 0px;
     }
 `
+
+const MainTitle = styled.h1`
+    font-weight: 700;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: ${theme.colors.secondaryBg};
+    margin-bottom: 12px;
+
+    p {
+        display: none;
+    }
+`
+
 
 const ButtonGroup = styled.div`
     display: flex;
@@ -120,6 +125,7 @@ const Image = styled.img`
 export const S = {
     StyledFlexWrapper,
     Description,
+    MainTitle,
     ButtonGroup,
     LinkProjects,
     LinkLinkedIn,
