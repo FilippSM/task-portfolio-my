@@ -25,13 +25,18 @@ const SocialList = styled.ul`
     display: flex;
     gap: 24px;
     margin-bottom: 32px;
+    
 
     position: relative;
     z-index: 999;
 `;
 
 const SocialItem = styled.li`
-    &:hover {
+    transition: ${theme.animations.transition};
+
+
+    &:hover
+     {
         transform: translateY(-10px);
     }
 `;
@@ -40,7 +45,9 @@ const SocialLink = styled.a`
     color: ${theme.colors.accent};
 
     &:hover {
+        transform: translateY(-10px);
         color: ${theme.colors.secondaryBg};
+        
     }
 `;
 

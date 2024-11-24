@@ -7,6 +7,8 @@ export const Button = styled.button`
     width: 89px;
     height: 43px;
     background-color: ${theme.colors.secondaryBg};
+
+    transition: ${theme.animations.transition};
     
     //выравнивание текста по уентру
     display: flex; /* Используем flexbox для центрирования */

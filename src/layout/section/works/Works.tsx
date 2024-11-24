@@ -28,7 +28,7 @@ const workData = [
 
 export const Works: React.FC = () => {
     return (
-        <S.Works>
+        <S.Works id={"projects"}>
             <Container>
                 <SectionTitle>
                     Projects

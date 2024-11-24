@@ -79,6 +79,8 @@ const Link = styled.a`
     width: 150px;
     height: 43px;
     background-color: ${theme.colors.white};
+
+    transition: ${theme.animations.transition};
     
     //выравнивание текста по центру
     display: flex; /* Используем flexbox для центрирования */

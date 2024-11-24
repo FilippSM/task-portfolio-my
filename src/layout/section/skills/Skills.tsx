@@ -13,7 +13,6 @@ export const Skills = () => {
             <Container>
                 <SectionTitle>Skills</SectionTitle>
                 <S.StyledFlexWrapper wrap={"wrap"} justify={"space-between"} gap="74px 0px">
-
                     {skillData.map((s, index) => {
                         return (
                             <Skill iconId={s} key={index}/>

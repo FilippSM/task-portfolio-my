@@ -1,21 +1,22 @@
 import styled, { css } from "styled-components";
 import { theme } from "../../../styles/Theme";
+import { Link } from "react-scroll";
 
 //Menu
 const MenuItem = styled.li`
     &:hover {
         transform: skewX(12deg);
     }
-  /*   position: relative; */
 `
-const Link = styled.a`
+const NavLink = styled(Link)`
     color: ${theme.colors.accent};
     font-family: "Raleway", sans-serif;
     font-weight: 500;
     font-size: 18px;
     line-height: 1.6;
+    transition: ${theme.animations.transition};
 
-    &:hover {
+    &:hover, &.active  {
         /* color: white; */
         color: ${theme.colors.white};
         font-weight: 800;
@@ -47,7 +48,7 @@ const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
     z-index: 99999;
     background-color: rgba(253, 196, 53, 0.9);
     display: none;
-
+  
     ${props => props.isOpen && css<{ isOpen: boolean }>`
         display: flex;
         justify-content: center;
@@ -73,7 +74,9 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
     right: -100px;
     width: 200px;
     height: 200px;
+  
     z-index: 99999999;
+
 
     span {
         display: block;
@@ -83,6 +86,8 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
         position: absolute;
         left: 60px;
         bottom: 72px;
+
+        transition: ${theme.animations.transition};
 
         ${props => props.isOpen && css<{ isOpen: boolean }>`
             background-color: rgba(255, 255, 255, 0); /* задается прозрачность спана */
@@ -96,6 +101,8 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
             background-color: ${theme.colors.accent};
             position: absolute;  
             transform: translateY(-6px);
+
+            transition: ${theme.animations.transition};
 
             ${props => props.isOpen && css<{ isOpen: boolean }>`
                 transform: rotate(-45deg) translateY(0);
@@ -111,6 +118,8 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
             position: absolute;  
             transform: translateY(6px);
 
+            transition: ${theme.animations.transition};
+
             ${props => props.isOpen && css<{ isOpen: boolean }>`
                 transform: rotate(45deg) translateY(0);
             `}
@@ -120,7 +129,7 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
 
 export const S = {
     MenuItem, 
-    Link,
+    NavLink,
     DesktopMenu,
     MobileMenu,
     MobileMenuPopup,
