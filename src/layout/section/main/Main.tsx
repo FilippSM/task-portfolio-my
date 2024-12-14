@@ -7,12 +7,12 @@ import Typewriter from 'typewriter-effect';
 
 export const Main: React.FC = () => {
     return (
-        <S.Main id={"about"}>
+        <S.Main>
             <Container>
-                <S.StyledFlexWrapper justify={"space-between"} >
+                <S.StyledFlexWrapper justify={"space-between"}>
                     <S.Description>
                         {/*   <h1>Software Developer</h1> */}
-                        <S.MainTitle>
+                        <S.MainTitle id={"about"}>
                             <p>Software Developer</p>
                             <Typewriter
                                 options={{

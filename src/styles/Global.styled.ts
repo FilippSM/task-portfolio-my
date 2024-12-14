@@ -18,12 +18,19 @@ export const GlobalStyle = createGlobalStyle`
         -moz-osx-font-smoothing: grayscale;
 
         background-color: ${theme.colors.primaryBg};
-        color: ${theme.colors.font}
+        color: ${theme.colors.font};
+        min-width: 300px; /* окно после 300px идет маштабирование чтобы не появлялся горизонтальный скролл и и конки по одному */
+    }
+
+    .no-scroll {
+        overflow: hidden;
+        height: 100%;
     }
 
     a {
         text-decoration: none;
         cursor: pointer;
+        white-space: nowrap; //убрирает перенос слов
     }
 
     ul {
@@ -34,6 +41,7 @@ export const GlobalStyle = createGlobalStyle`
         background-color: unset;
         border: none;
         cursor: pointer;
+        white-space: nowrap; //убрирает перенос слов
     }
 
     h1, 

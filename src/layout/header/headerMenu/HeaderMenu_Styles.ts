@@ -4,9 +4,9 @@ import { Link } from "react-scroll";
 
 //Menu
 const MenuItem = styled.li`
-    &:hover {
+   /*  &:hover {
         transform: skewX(12deg);
-    }
+    } */
 `
 const NavLink = styled(Link)`
     color: ${theme.colors.accent};
