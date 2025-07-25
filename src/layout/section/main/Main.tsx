@@ -22,7 +22,7 @@ export const Main: React.FC = () => {
                                 }}
                             />
                         </S.MainTitle>
-                        <h2>Hello, my name is Vahid Navazan</h2>
+                        <h2>Привет, меня зовут Самсонов Филипп</h2>
                         <p>Short text with details about you, what you do or your professional career. You can add more information on the about page.</p>
                         <S.ButtonGroup>
                             <S.LinkProjects href="">Projects</S.LinkProjects>
