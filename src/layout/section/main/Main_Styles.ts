@@ -114,6 +114,7 @@ const ContainerImage = styled.div`
 `
 
 const Image = styled.img`
+    width: 600px; 
     min-width: 300px; /* для маштабирования */
 
     @media ${theme.media.tablet} {

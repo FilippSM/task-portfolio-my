@@ -18,7 +18,7 @@ const NavLink = styled(Link)`
 
     &:hover, &.active  {
         /* color: white; */
-        color: ${theme.colors.white};
+        /* color: ${theme.colors.white}; */
         font-weight: 800;
         font-size: 22px;
     }
