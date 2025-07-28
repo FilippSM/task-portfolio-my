@@ -13,17 +13,17 @@ export const Main: React.FC = () => {
                     <S.Description>
                         {/*   <h1>Software Developer</h1> */}
                         <S.MainTitle id={"about"}>
-                            <p>Software Developer</p>
+                            <p>Frontend Developer</p>
                             <Typewriter
                                 options={{
-                                    strings: ['Software Developer'],
+                                    strings: ['Frontend Developer'],
                                     autoStart: true,
                                     loop: true,
                                 }}
                             />
                         </S.MainTitle>
                         <h2>Привет, меня зовут Самсонов Филипп</h2>
-                        <p>Short text with details about you, what you do or your professional career. You can add more information on the about page.</p>
+                        <p>Front-end разработчик с опытом 1+ года создания SPA с использованием React, TypeScript, Redux (RTK) и другими связанными библиотеками.</p>
                         <S.ButtonGroup>
                             <S.LinkProjects href="">Projects</S.LinkProjects>
                             <S.LinkLinkedIn href="">LinkedIn</S.LinkLinkedIn>
