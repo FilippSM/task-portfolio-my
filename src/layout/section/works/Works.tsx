@@ -9,19 +9,22 @@ import {S} from "./Works_Styles";
 
 const workData = [
     {
-        title: "Project Name",
-        text: "I created this personal project in order to show how to create an interface in Figma using a portfolio as an example.",
-        src: projOne
+        title: "Todolist",
+        text: "Проект менеджер задач.",
+        src: projOne,
+        href: "https://filippsm.github.io/todolist-sprint-three/"
     },
     {
-        title: "Project Name",
-        text: "What was your role, your deliverables, if the project was personal, freelancing.",
-        src: projTwo
+        title: "Calculator",
+        text: "проект калькулятор плотности",
+        src: projTwo,
+        href: "https://filippsm.github.io/CalculatorReact/"
     },
     {
         title: "Project Name",
         text: "You can also add in this description the type of the project, if it was for web, mobile, electron.",
-        src: projFour
+        src: projFour,
+        href: "#"
     }
 
 ]
@@ -42,6 +45,7 @@ export const Works: React.FC = () => {
                                 text={w.text}
                                 src={w.src}
                                 key={index}
+                                href={w.href}
                             />
                         );
                     })}
