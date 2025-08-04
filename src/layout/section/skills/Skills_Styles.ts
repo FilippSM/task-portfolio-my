@@ -23,6 +23,7 @@ const Skill = styled.div`
 
     display: flex; /* Используем Flexbox для колонки */
     justify-content: center; /* Центрируем по горизонтали */
+    flex-direction: column;
     align-items: center; /* Центрируем по вертикали */
     height: auto; /* Установите фиксированную высоту для вертикального центрирования */
     margin-bottom: 20px;
