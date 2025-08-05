@@ -7,7 +7,7 @@ import {S} from "./Skills_Styles"
     "vscode", "js", "css", "html", "greensock", "vector","github", "git", "react", "sass","bootstrap", "tailwind"
 ] */
 const skillData = [
-    "vscode", "js", "css", "html", "git", "react", "sass"
+    "html", "css", "react", "Next.js", "Javascript", "Typescript", "git", "Module CSS", "sass", "Styled-components", "Redux Toolkit", "RTK Query"
 ]
 
 export const Skills = () => {
