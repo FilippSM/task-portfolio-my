@@ -3,20 +3,20 @@ import { Button } from "../../../components/Button";
 import { Container } from "../../../components/Container";
 import {S} from "./Contacts_Styles";
 import emailjs from '@emailjs/browser';
-import { ElementRef, useRef } from "react";
+import { ElementRef, FormEvent, useRef } from "react";
 
 
 export const Contact: React.FC = () => {
     const form = useRef<ElementRef<"form">>(null);
 
-  const sendEmail = (e: any) => {
+  const sendEmail = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     if(!form.current) return
 
     emailjs
-      .sendForm('service_51lnnjb', 'template_jp65qxt', form.current, {
-        publicKey: '1rSCE8QE0htoWJYe3',
+      .sendForm(process.env.REACT_APP_YOUR_SERVICE_ID as string, process.env.REACT_APP_YOUR_TEMPLATE_ID as string, form.current, {
+        publicKey: process.env.REACT_APP_YOUR_PUBLIC_KEY as string,
       })
       .then(
         () => {
@@ -26,7 +26,7 @@ export const Contact: React.FC = () => {
           console.log('FAILED...', error.text);
         },
       );
-      e.target.reset() //очистка  формы после отправки
+      e.currentTarget.reset() //очистка  формы после отправки
   };
 
     return (

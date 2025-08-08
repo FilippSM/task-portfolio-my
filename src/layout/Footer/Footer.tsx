@@ -5,9 +5,9 @@ import React from "react";
 
 
 const socialItemsData = [
-    {
+   /*  {
         iconId: "instagram",
-    },
+    }, */
     {
         iconId: "linkedin",
     },
