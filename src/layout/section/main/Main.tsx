@@ -25,8 +25,18 @@ export const Main: React.FC = () => {
                         <h2>Привет, меня зовут Самсонов Филипп</h2>
                         <p>Front-end разработчик с опытом 1+ года создания SPA с использованием React, TypeScript, Redux (RTK) и другими связанными библиотеками.</p>
                         <S.ButtonGroup>
-                            <S.LinkProjects href="">Projects</S.LinkProjects>
-                            <S.LinkLinkedIn href="">LinkedIn</S.LinkLinkedIn>
+                            {/* <S.LinkProjects href="projects">Projects</S.LinkProjects> */}
+                            <S.LinkProjects 
+                                to="projects" 
+                                smooth={true} 
+                            >
+                                Projects
+                            </S.LinkProjects>
+                            <S.LinkLinkedIn
+                                as="a" 
+                                href="https://www.linkedin.com/in/филипп-самсонов-463734226">
+                                LinkedIn
+                                </S.LinkLinkedIn>
                         </S.ButtonGroup>
                     </S.Description>
                     <S.ContainerImage>

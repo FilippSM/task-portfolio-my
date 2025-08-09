@@ -20,13 +20,13 @@ const workData = [
         src: projTwo,
         href: "https://filippsm.github.io/CalculatorReact/"
     },
-    {
+   /*  {
         title: "Project Name",
         text: "You can also add in this description the type of the project, if it was for web, mobile, electron.",
         src: projFour,
         href: "#"
     }
-
+ */
 ]
 
 export const Works: React.FC = () => {

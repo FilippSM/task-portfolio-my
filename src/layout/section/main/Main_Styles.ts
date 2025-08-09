@@ -1,7 +1,8 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { theme } from "../../../styles/Theme";
 import { font } from "../../../styles/Common";
 import { FlexWrapper } from "../../../components/FlexWrapper";
+import { Link } from "react-scroll";
 
 const StyledFlexWrapper = styled(FlexWrapper)`
     @media ${theme.media.tablet} {
@@ -51,43 +52,84 @@ const ButtonGroup = styled.div`
     gap: 12px;
 `
 
-const LinkProjects = styled.a`
-    border: none;
-    border-radius: 5px;
-    width: 115px;
-    height: 43px;
-    background-color: ${theme.colors.secondaryBg};
+const commonButtonStyles = css`
+  /* Общие стили */
+  border-radius: 5px;
+  width: 115px;
+  height: 43px;
+  transition: ${theme.animations.transition};
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.5;
+  cursor: pointer;
+`;
 
-    transition: ${theme.animations.transition};
-    
-    //выравнивание текста по уентру
-    display: flex; /* Используем flexbox для центрирования */
-    justify-content: center; /* Центрируем по горизонтали */
-    align-items: center; /* Центрируем по вертикали */
+const LinkProjects = styled(Link)`
+  ${commonButtonStyles};
+  border: none;
+  background-color: ${theme.colors.secondaryBg};
+  color: ${theme.colors.accent};
 
-    //стили текста
-    color: ${theme.colors.accent};
-    font-family: "Roboto", sans-serif;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 1.5;
-
-    &:hover {
-        background-color: ${theme.colors.white};
-        border: 2px solid ${theme.colors.accent};
-    }
-`
-//наследование
-const LinkLinkedIn = styled(LinkProjects)`
-    border: 2px solid ${theme.colors.accent};
+  &:hover {
     background-color: ${theme.colors.white};
-    color: ${theme.colors.accent};
+    border: 2px solid ${theme.colors.accent};
+  }
+`;
 
-    &:hover {
-        background-color: ${theme.colors.secondaryBg};
-        border: none;
-    }
-`
+const LinkLinkedIn = styled(LinkProjects)`
+  border: 2px solid ${theme.colors.accent};
+  background-color: ${theme.colors.white};
+  color: ${theme.colors.accent};
+
+  &:hover {
+    background-color: ${theme.colors.secondaryBg};
+    border: none;
+  }
+`;
+
+/* const LinkProjects = styled.a` */
+
+// const LinkProjects = styled(Link)`
+//     border: none;
+//     border-radius: 5px;
+//     width: 115px;
+//     height: 43px;
+//     background-color: ${theme.colors.secondaryBg};
+
+//     transition: ${theme.animations.transition};
+    
+//     //выравнивание текста по уентру
+//     display: flex; /* Используем flexbox для центрирования */
+//     justify-content: center; /* Центрируем по горизонтали */
+//     align-items: center; /* Центрируем по вертикали */
+
+//     //стили текста
+//     color: ${theme.colors.accent};
+//     font-family: "Roboto", sans-serif;
+//     font-weight: 500;
+//     font-size: 18px;
+//     line-height: 1.5;
+
+//     &:hover {
+//         background-color: ${theme.colors.white};
+//         border: 2px solid ${theme.colors.accent};
+//     }
+// `
+// //наследование
+// const LinkLinkedIn = styled(LinkProjects)`
+//     border: 2px solid ${theme.colors.accent};
+//     background-color: ${theme.colors.white};
+//     color: ${theme.colors.accent};
+
+//     &:hover {
+//         background-color: ${theme.colors.secondaryBg};
+//         border: none;
+//     }
+// `
 
 const Main = styled.div`
     position: relative;
