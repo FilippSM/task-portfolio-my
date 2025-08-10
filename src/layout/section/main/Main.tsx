@@ -34,7 +34,7 @@ export const Main: React.FC = () => {
                             </S.LinkProjects>
                             <S.LinkLinkedIn
                                 as="a" 
-                                href="https://www.linkedin.com/in/филипп-самсонов-463734226">
+                                href="https://www.linkedin.com/in/filipp-samsonau-463734226">
                                 LinkedIn
                                 </S.LinkLinkedIn>
                         </S.ButtonGroup>

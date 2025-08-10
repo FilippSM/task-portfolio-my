@@ -10,7 +10,7 @@ const socialItemsData = [
    // }, 
     {
         iconId: "linkedin",
-        href: "https://www.linkedin.com/in/филипп-самсонов-463734226"
+        href: "https://www.linkedin.com/in/filipp-samsonau-463734226"
     },
     {
         iconId: "envelope",
