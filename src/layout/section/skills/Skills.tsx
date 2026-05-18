@@ -5,7 +5,7 @@ import {S} from "./Skills_Styles"
 
 const skillData = [
     "html", "css", "Javascript", "Typescript", "react", "Next.js", "Module CSS", "scss", "Styled-components", "tailwind", "Redux Toolkit", "RTK Query", "Zustand", "React Router", "React Hook Form", "Zod", "Rest API", 
-    "GraphQL", "Axios", "WebSockets", "Jest", "Storybook", "FSD", "Git", "GitHub", "GitLab", "Material UI", "Radix"
+    "GraphQL", "Axios", "WebSockets", "Jest", "Storybook", "FSD", "git", "GitHub", "GitLab", "Material UI", "Radix"
 ]
 
 export const Skills = () => {
