@@ -23,7 +23,7 @@ export const Main: React.FC = () => {
                             />
                         </S.MainTitle>
                         <h2>Привет, меня зовут Самсонов Филипп</h2>
-                        <p>Front-end разработчик с опытом 1+ года создания SPA с использованием React, TypeScript, Redux (RTK) и другими связанными библиотеками.</p>
+                        <p>Frontend разработчик с опытом 1+ года создания SPA и SSR-приложений на React/Next.js.</p>
                         <S.ButtonGroup>
                             {/* <S.LinkProjects href="projects">Projects</S.LinkProjects> */}
                             <S.LinkProjects 
