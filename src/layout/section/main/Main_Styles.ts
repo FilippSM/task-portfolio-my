@@ -91,6 +91,13 @@ const LinkLinkedIn = styled(LinkProjects)`
   }
 `;
 
+const LinkDownloadCV = styled(LinkLinkedIn)`
+  width: auto;
+  min-width: 140px;
+  padding: 0 12px;
+  text-decoration: none;
+`;
+
 /* const LinkProjects = styled.a` */
 
 // const LinkProjects = styled(Link)`
@@ -174,6 +181,7 @@ export const S = {
     MainTitle,
     ButtonGroup,
     LinkProjects,
+    LinkDownloadCV,
     LinkLinkedIn,
     Main,
     ContainerImage,

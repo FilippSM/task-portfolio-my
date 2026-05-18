@@ -37,6 +37,13 @@ export const Main: React.FC = () => {
                                 href="https://www.linkedin.com/in/filipp-samsonau-463734226">
                                 LinkedIn
                                 </S.LinkLinkedIn>
+                            <S.LinkDownloadCV
+                                as="a"
+                                href="/resume.pdf"
+                                download="Samsonov-Filipp-CV.pdf"
+                            >
+                                Download CV
+                            </S.LinkDownloadCV>
                         </S.ButtonGroup>
                     </S.Description>
                     <S.ContainerImage>
