@@ -3,11 +3,7 @@ import { Skill } from "./skill/Skill";
 import { Container } from "../../../components/Container";
 import {S} from "./Skills_Styles"
 
-/* const skillData = [
-    "vscode", "js", "css", "html", "greensock", "vector","github", "git", "react", "sass","bootstrap", "tailwind"
-] */
 const skillData = [
-    /* "html", "css", "js", "react", "Next.js", "Javascript", "Typescript", "git", "Module CSS", "sass", "Styled-components", "Redux Toolkit", "RTK Query", "Jest", "Material UI", "Rest API", "Axios" */
     "html", "css", "Javascript", "Typescript", "react", "Next.js", "Module CSS", "scss", "Styled-components", "tailwind", "Redux Toolkit", "RTK Query", "Zustand", "React Router", "React Hook Form", "Zod", "Rest API", 
     "GraphQL", "Axios", "WebSockets", "Jest", "Storybook", "FSD", "Git", "GitHub", "GitLab", "Material UI", "Radix"
 ]
