@@ -1,32 +1,32 @@
 import { SectionTitle } from "../../../components/SectionTitle";
 import { Work } from "./work/Work";
-import projOne from "./../../../assets/images/Pic_2.webp"
-import projTwo from "./../../../assets/images/Pic_3.webp"
-import projFour from "./../../../assets/images/Pic_4.webp"
+import projOne from "./../../../assets/images/Pic_1.png"
+import projTwo from "./../../../assets/images/Pic_2.png"
+import projFour from "./../../../assets/images/Pic_3.png"
 import { Container } from "../../../components/Container";
 import React from "react";
 import {S} from "./Works_Styles";
 
-const workData = [
-    {
-        title: "Todolist",
-        text: "Проект менеджер задач.",
-        src: projOne,
-        href: "https://filippsm.github.io/todolist-sprint-three/"
-    },
+const workData = [  
     {
         title: "Calculator",
-        text: "проект калькулятор плотности",
-        src: projTwo,
+        text: "Приложение по автоматизации расчётов для сотрудников, заменяющий рутинные вычисления в Excel/вручную",
+        src: projOne,
         href: "https://filippsm.github.io/CalculatorReact/"
     },
-   /*  {
-        title: "Project Name",
-        text: "You can also add in this description the type of the project, if it was for web, mobile, electron.",
+    {
+        title: "Mypixelgram",
+        text: "Приложение для публикации фото и коротких постов: профиль, подписки, уведомления",
+        src: projTwo,
+        href: "https://github.com/dev47771/mypixelgram"
+    },
+    {
+        title: "Ui-kit",
+        text: "Библиотека React-компонент",
         src: projFour,
-        href: "#"
+        href: "https://github.com/dev47771/mypixelgram-uikit"
     }
- */
+
 ]
 
 export const Works: React.FC = () => {
