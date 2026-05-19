@@ -4,7 +4,7 @@ import React from "react";
 
 export const Logo: React.FC = () => {
     return (
-        <a>
+        <a href="#about">
             <StyledSpan>
                 Filipp Samsonau
             </StyledSpan>
